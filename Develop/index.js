@@ -5,8 +5,7 @@ const { RSA_PKCS1_OAEP_PADDING } = require("constants");
 
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
-const writeFileAsync = util.promisify(fs.writeFile);
-
+// const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
@@ -19,6 +18,11 @@ const questions = [
         type: "input",
         name: "description",
         message: "Describe your project"
+     },
+     {
+        type: "input",
+        name: "credits",
+        message: "Do you have collaborators you would like to credit"
      },
      {
         type: "input",
@@ -41,6 +45,11 @@ const questions = [
         message: "What are your test commands for this application?"
      },
      {
+        type: "input",
+        name: "github",
+        message: "Your github url for questions:"
+     },
+     {
         type: "list",
         name: "license",
         message: "What is the license for your application?",
@@ -50,18 +59,25 @@ const questions = [
             "[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
         ]
      },
-
 ];
 
 // function to write README file
 function writeToFile(fileName, data) {
-
+    fs.writeFile("readMe.md", generateMarkdown, (err)=>err);
+    console.log("file written");
 }
 
 // function to initialize program
 async function init() {
-    let answers = await inquirer.prompt(questions);
-    console.log(answers);
+    try{
+        let answers = await inquirer.prompt(questions);
+        console.log(answers);
+        let markdown = await generateMarkdown(answers);
+        let writeFile = await writeToFile("readMe.md", markdown, (err)=>err);
+    }
+    catch(err){
+        throw err
+    }
 }
 
 // function call to initialize program
