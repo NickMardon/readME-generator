@@ -50,6 +50,11 @@ const questions = [
         message: "Your github url for questions:"
      },
      {
+        type: "input",
+        name: "email",
+        message: "What is your email address?"
+     },
+     {
         type: "list",
         name: "license",
         message: "What is the license for your application?",

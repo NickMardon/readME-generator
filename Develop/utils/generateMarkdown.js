@@ -38,6 +38,12 @@ ${data.license}
 
 ${data.contributing}
 
+## Questions
+
+${data.github}
+
+${data.email}
+
 ## Tests
 
 ${data.tests}

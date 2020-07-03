@@ -1,10 +1,10 @@
 # Project Title 
 
-Yes
+My Project
 
 ## Description 
 
-Yes
+My Project is a node.js application that allows the user to generate a readMe.md file by answering a series of command line prompts.
 
 ## Table of Contents
 
@@ -16,26 +16,32 @@ Yes
 
 ## Installation 
 
-YEs
+NPM install.  Dependencies incluce inquirer.
 
 
 ## Usage 
 
-Yes
+Generating readeMe.md files
 
 
 ## Credits 
 
-Yes
+No
 
 ## License
 
-[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
+[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
 
 ## Contributing
 
-yes
+Send an email to get approval before contributing to this project.
+
+## Questions
+
+https://github.com/NickMardon
+
+nickmardondigital@gmail.com
 
 ## Tests
 
-yes
+N/A
