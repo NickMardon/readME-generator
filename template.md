@@ -21,28 +21,23 @@ ${data.installation}
 
 ## Usage 
 
-${"data.usage"}
+${data.usage}
 
 
 ## Credits 
 
-${"data.credits"}
+${data.credits}
 
 ## License
 
-${"license"}
-
-
-## Badges
-
-${"license"}
+${data.license}
 
 ## Contributing
 
-${"contributing"}
+${data.contributing}
 
 ## Tests
 
-${"tests"}
+${data.tests}
 
 

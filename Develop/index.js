@@ -63,7 +63,11 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile("readMe.md", generateMarkdown, (err)=>err);
+    fs.writeFile("readMe.md", data, (err)=>{
+        if(err){
+        console.log(err)
+        }
+    });
     console.log("file written");
 }
 
@@ -72,8 +76,8 @@ async function init() {
     try{
         let answers = await inquirer.prompt(questions);
         console.log(answers);
-        let markdown = await generateMarkdown(answers);
-        let writeFile = await writeToFile("readMe.md", markdown, (err)=>err);
+        let markdown = generateMarkdown(answers);
+        let writeFile = writeToFile("readMe.md", markdown);
     }
     catch(err){
         throw err

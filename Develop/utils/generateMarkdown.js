@@ -1,12 +1,12 @@
 // function to generate markdown for README
+function generateMarkdown(data) {
+return `# Project Title 
 
-const string = `# Project Title 
-
-${"data.title"}
+${data.title}
 
 ## Description 
 
-${"data.description"}
+${data.description}
 
 ## Table of Contents
 
@@ -18,41 +18,31 @@ ${"data.description"}
 
 ## Installation 
 
-${"data.installation"}
+${data.installation}
 
 
 ## Usage 
 
-${"data.usage"}
+${data.usage}
 
 
 ## Credits 
 
-${"data.credits"}
+${data.credits}
 
 ## License
 
-${"license"}
-
-
-## Badges
-
-${"license"}
+${data.license}
 
 ## Contributing
 
-${"contributing"}
+${data.contributing}
 
 ## Tests
 
-${"tests"}
-
-
-`
-
-function generateMarkdown(data) {
-return string
+${data.tests}
+`;
 }
 // console.log(string);
 
-module.exports = string;
+module.exports = generateMarkdown;
