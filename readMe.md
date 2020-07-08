@@ -40,7 +40,7 @@ Email for approval before contributing.
 
 Contact me at the following for questions:
 
-# ${data.title}
+https://github.com/NickMardon
 
 nickmardondigital@gmail.com
 
